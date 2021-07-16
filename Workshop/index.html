@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="stytle.css">
+</head>
+
+<body>
+  <form action="form.html" method="post" name="myForm" onsubmit="return formValid();" id="signup">
+    <div id="container">
+      <table>
+        <tr>
+          <td>First Name</td>
+          <td>
+            <input type="text" name="fname" />
+          </td>
+        </tr>
+        <tr>
+          <td>Last Name</td>
+          <td>
+            <input type="text" name="lname" />
+          </td>
+        </tr>
+        <tr>
+          <td>User ID</td>
+          <td>
+            <input type="text" name="uid" />
+          </td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td>
+            <input type="password" name="pass" />
+          </td>
+        </tr>
+        <tr>
+          <td>E-mail</td>
+          <td>
+            <input type="text" name="email" />
+          </td>
+        </tr>
+      </table>
+
+      <input type="submit" name="btnRegister" value="Submit" />
+      <input type="reset" name="btnReset" value="Reset" />
+
+    </div>
+  </form>
+  <div id=show class="boxshown"></div>
+  <script>
+    function formValid() {
+      var fname = document.getElementsByName("fname")[0].value;
+      var lname = document.getElementsByName("lname")[0].value;
+      var uid = document.getElementsByName("uid")[0].value;
+      var pass = document.getElementsByName("pass")[0].value;
+      var email = document.getElementsByName("email")[0].value;
+     
+
+      if ((fname == null || fname == "") && (lname == null || lname == "")) {
+        alert("Enter Your name ");
+        return false;
+      }
+      if (uid == null || uid == "") {
+        alert("Enter your user ID");
+        return false;
+      }
+      if ((pass == null || pass == "") && (cpass == null || cpass == "")) {
+        alert("Enter password");
+        return false;
+      }
+      if (email == null || email == "") {
+        alert("Enter your email number");
+        return false;
+      }else{
+        alert("Form Validated Successfully! Submitting Details...");
+        document.getElementById('show').innerHTML = `<p><span>First name : </span>${fname}</p>
+                                                    <p><span>Last name : </span>${lname}</p>
+                                                    <p><span>User ID : </span>${uid}</p>
+                                                    <p><span>Password : </span>${pass}</p>
+                                                    <p><span>E-mail : </span>${email}</p>`
+        return false;
+      }
+    }
+
+  </script>
+</body>
+
+</html>

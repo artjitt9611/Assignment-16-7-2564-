@@ -1,0 +1,26 @@
+.boxshown{
+    position: absolute;
+    justify-content: center;
+    left:650px
+}
+body{
+    position: relative;
+    background-color:paleturquoise;
+    font-family:Kanit ;
+
+}
+p{
+    font-family: kanit;
+    font-size: 2em;
+}
+span{
+    color: orange
+}
+
+#signup{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
